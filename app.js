@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const taskRoutes = require('./routes/tasks');
-const connectDB = require('./connect');
+const connectDB = require('./connectDB');
 
 
 app.use(express.json());
@@ -33,6 +33,7 @@ const start = async () => {
     }
 }
 
+// Initialise the connection to DB and port
 start();
 
 
